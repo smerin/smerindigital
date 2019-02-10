@@ -35,7 +35,7 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-        <Mailchimp title="Subscribe for updates..." />
+        <Mailchimp title="Signup for more helpful articles in the future" />
 
         <ul
           style={{
