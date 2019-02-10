@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://goofy-agnesi-ae4f39.netlify.com/* https://www.smerindigital.com/:splat 301!
