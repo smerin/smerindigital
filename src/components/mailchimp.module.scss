@@ -1,0 +1,94 @@
+@import "../styles/utilities";
+
+.mailchimp {
+  background: $saffron;
+  //  max-width: 32rem;
+  margin: 0 0 1.5rem;
+  padding: 1.5rem 2rem;
+
+  h3 {
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+
+.form {
+  margin: 0 0 0.75rem;
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
+    &[disabled] {
+      opacity: 0.5;
+    }
+  }
+}
+
+.inputs {
+  display: flex;
+
+  input {
+    flex: 1;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.5rem;
+    padding: 0rem 1rem;
+    border: 0;
+  }
+  button {
+    flex: 0 0 4rem;
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding: 0.15rem 0.75rem 0 0.5rem;
+    background: $turquoise;
+    color: $white;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: $charcoal;
+    }
+
+    svg {
+      transform: rotate(20deg);
+    }
+  }
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem;
+  background: $turquoise;
+  color: $white;
+
+  &.success {
+    background: $tiffany;
+  }
+  &.error {
+    background: $rose;
+    font-size: 0.75rem;
+  }
+
+  svg {
+    flex: 0 0 2rem;
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+  }
+  p {
+    margin: 0;
+  }
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}

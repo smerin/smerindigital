@@ -47,18 +47,19 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-134204737-1`
       }
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Smerin Digital`,
+        short_name: `SmerinDigital`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -72,6 +73,13 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://smerindigital.us20.list-manage.com/subscribe/post?u=ff522dc861890bb3a34d14ccb&amp;id=268edda1cd"
       }
     }
   ]

@@ -1,0 +1,43 @@
+$turquoise: #00a6cc;
+$tiffany: #03b5aa;
+$rose: #ea526f;
+$plum: #88498f;
+$apple: #7ddf64;
+$saffron: #f3c037;
+$ice: #cdecf6;
+$white: #ffffff;
+$lightgrey: #dddddd;
+$dove: #666666;
+$charcoal: #333333;
+$black: #211a1d;
+
+$headingFont: "Domine", sans-serif;
+
+$desktop: 86.25em; // 1380px
+$laptop: 58.75em; // 980px
+$tablet: 48.75em; // 780px
+$mobile: 28.125em; // 450px
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  } @else if $point == laptop {
+    @media (min-width: $laptop) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  } @else if $point == phablet {
+    @media (min-width: $mobile) {
+      @content;
+    }
+  } @else if $point == mobileonly {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }
+}

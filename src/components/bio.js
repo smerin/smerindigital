@@ -9,12 +9,12 @@ function Bio() {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { author, social } = data.site.siteMetadata;
+        const { author } = data.site.siteMetadata;
         return (
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5)
+              marginBottom: rhythm(0.5)
             }}
           >
             <Image
@@ -31,12 +31,8 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, a front-end developer from
-              Bristol, UK.
-              <br />
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow him on Twitter
-              </a>
+              Written by <strong>{author}</strong>, front-end developer and
+              musician from Bristol, UK.
             </p>
           </div>
         );

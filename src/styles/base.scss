@@ -1,0 +1,122 @@
+@import "./utilities";
+
+body {
+  color: $charcoal;
+  background: $white;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  // display: block;
+  // width: 100%;
+}
+
+a {
+  color: $turquoise;
+  transition: color 0.3s ease;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include breakpoint(tablet) {
+    padding: 0 2rem;
+  }
+}
+
+.content {
+  margin: 2rem 0;
+  max-width: 40rem;
+}
+
+.list-inline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+section {
+  padding: 2rem 0;
+
+  &.yellow {
+    background: $saffron url("/background-yellow.jpg");
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+/* Styling for mobile menu */
+.bm-burger-button {
+  position: fixed;
+  width: 2rem;
+  height: 1.5rem;
+  right: 1.25rem;
+  top: 1.25rem;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+
+  &:hover {
+    .bm-burger-bars {
+      background: $turquoise;
+    }
+  }
+}
+.bm-burger-bars {
+  background: $charcoal;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+.bm-cross-button {
+  top: 0.75rem !important;
+  right: 1rem !important;
+  height: 48px !important;
+  width: 48px !important;
+
+  > span {
+    top: 0 !important;
+    right: 26px !important;
+  }
+}
+.bm-cross {
+  background: $white;
+  width: 6px !important;
+  height: 48px !important;
+}
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+.bm-morph-shape {
+  fill: #373a47;
+}
+.bm-item-list {
+  padding: 0.5rem;
+}
+.bm-item {
+  display: inline-block;
+  padding: 1rem;
+  font-family: $headingFont;
+  color: $white;
+
+  &:hover {
+    color: $ice;
+  }
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
